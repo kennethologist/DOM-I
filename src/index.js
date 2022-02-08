@@ -40,3 +40,74 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const navigation = document.querySelector("nav");
+const navLinks = navigation.querySelectorAll("a");
+
+let linkNo = 1;
+navLinks.forEach((link) => {
+  link.textContent = siteContent["nav"]["nav-item-" + linkNo];
+  link.classList.add("italic");
+  linkNo += 1;
+});
+
+const ctaSection = document.querySelector(".cta");
+const ctaH1 = ctaSection.querySelector("h1");
+const ctaButton = ctaSection.querySelector("button");
+
+ctaH1.textContent = siteContent["cta"]["h1"];
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const mainSectionTopContent = document.querySelector(".main-content .top-content");
+
+const featuresH4 =  mainSectionTopContent.querySelector(".text-content:nth-of-type(1) h4");
+const featuresContent =  mainSectionTopContent.querySelector(".text-content p:nth-of-type(1)");
+featuresH4.textContent = siteContent["main-content"]["features-h4"];
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+const aboutH4 =  mainSectionTopContent.querySelector(".text-content:nth-of-type(2) h4");
+const aboutContent =  mainSectionTopContent.querySelector(".text-content:nth-of-type(2) p");
+aboutH4.textContent = siteContent["main-content"]["about-h4"];
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+const mainSectionBottomContent = document.querySelector(".main-content .bottom-content");
+
+const servicesH4 = mainSectionBottomContent.querySelector(".text-content:nth-of-type(1) h4");
+const servicesContent = mainSectionBottomContent.querySelector(".text-content:nth-of-type(1) p");
+servicesH4.textContent = siteContent["main-content"]["services-h4"];
+servicesContent.textContent = siteContent["main-content"]["services-content"];
+
+const productH4 = mainSectionBottomContent.querySelector(".text-content:nth-of-type(2) h4");
+const productContent = mainSectionBottomContent.querySelector(".text-content:nth-of-type(2) p");
+productH4.textContent = siteContent["main-content"]["product-h4"];
+productContent.textContent = siteContent["main-content"]["product-content"];
+
+const visionH4 = mainSectionBottomContent.querySelector(".text-content:nth-of-type(3) h4");
+const visionContent = mainSectionBottomContent.querySelector(".text-content:nth-of-type(3) p");
+visionH4.textContent = siteContent["main-content"]["vision-h4"];
+visionContent.textContent = siteContent["main-content"]["vision-content"];
+
+
+const contactSection = document.querySelector(".contact");
+const contactH4 = contactSection.querySelector("h4");
+const contactp1 = contactH4.nextElementSibling;
+const contactp2 = contactp1.nextElementSibling;
+const contactp3 = contactp2.nextElementSibling;
+
+contactH4.textContent = siteContent["contact"]["contact-h4"];
+contactp1.textContent = siteContent["contact"]["address"];
+contactp2.textContent = siteContent["contact"]["phone"];
+contactp3.textContent = siteContent["contact"]["email"];
+
+const footerLink = document.querySelector("footer a");
+footerLink.textContent = siteContent["footer"]["copyright"];
+footerLink.classList.add("bold");
+
+const imgLogo = document.querySelector("#logo-img");
+imgLogo.src = siteContent["images"]["logo-img"];
+
+const imgCTA = document.querySelector("#cta-img");
+imgCTA.src = siteContent["images"]["cta-img"];
+
+const imgMiddle = document.querySelector("#middle-img");
+imgMiddle.src = siteContent["images"]["accent-img"];
